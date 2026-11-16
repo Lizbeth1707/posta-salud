@@ -3,7 +3,7 @@
 @section('titulo', 'Inicio')
 
 @section('contenido')
-    <h1>Sistema de la Posta de Salud Comunitaria</h1>
+    <h1>Sistema de la Posta de Salud San Sebastian</h1>
 
     <p>Proyecto base funcionando con Laravel {{ app()->version() }}.</p>
 
