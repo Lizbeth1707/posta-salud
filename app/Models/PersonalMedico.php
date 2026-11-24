@@ -11,6 +11,14 @@ class PersonalMedico extends Model
 {
     use HasFactory;
 
+    public const ESPECIALIDADES = [
+        'Medicina general',
+        'Obstetricia',
+        'Enfermería',
+        'Odontología',
+        'Pediatría',
+    ];
+
     protected $table = 'personal_medico';
 
     protected $fillable = [

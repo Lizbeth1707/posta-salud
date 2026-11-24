@@ -26,7 +26,7 @@ class UpdatePacienteRequest extends FormRequest
             'apellidos' => ['required', 'string', 'max:80'],
             'fecha_nacimiento' => ['required', 'date', 'before_or_equal:today'],
             'sexo' => ['required', 'in:M,F'],
-            'telefono' => ['nullable', 'digits:9'],
+            'telefono' => ['nullable', 'regex:/^9[0-9]{8}$/'],
             'direccion' => ['nullable', 'string', 'max:150'],
         ];
     }
@@ -43,7 +43,7 @@ class UpdatePacienteRequest extends FormRequest
             'fecha_nacimiento.before_or_equal' => 'La fecha no puede ser futura.',
             'sexo.required' => 'Debe seleccionar el sexo.',
             'sexo.in' => 'El sexo seleccionado no es válido.',
-            'telefono.digits' => 'El teléfono debe tener 9 dígitos.',
+            'telefono.regex' => 'El celular debe empezar con 9 y tener 9 dígitos.',
         ];
     }
 }

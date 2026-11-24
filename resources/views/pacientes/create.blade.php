@@ -8,7 +8,7 @@
 
     <p>Complete los datos para registrar un nuevo paciente.</p>
 
-    <form action="{{ route('pacientes.store') }}" method="POST">
+    <form action="{{ route('pacientes.store') }}" method="POST" novalidate>
         @csrf
 
         <label for="dni">DNI</label>
